@@ -1,0 +1,47 @@
+{
+  "name": "accept_offer",
+  "summary": "Accept a token offer",
+  "description": "Accept a token offer",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_id",
+      "summary": "Non fungible contract id",
+      "description": "Fungible tokens to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "token_id",
+      "summary": "NFT token id to support",
+      "description": "NFT token id to support",
+      "schema": {
+        "$ref": "../standards/schemas/TokenId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "ft_token_id",
+      "summary": "FT token id to accept offer from",
+      "description": "FT token id to accept offer from",
+      "schema": {
+        "$ref": "../standards/schemas/TokenId.json"
+      },
+      "required": true
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleAcceptOfferSalesResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}

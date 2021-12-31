@@ -1,0 +1,29 @@
+{
+  "name": "get_supply_by_nft_token_type",
+  "summary": "Get supply by nft contract id",
+  "description": "Get supply by nft contract id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "token_type",
+      "summary": "Token type parameter for contract",
+      "description": "Token type parameter for contract",
+      "schema": {
+        "$ref": "../standards/schemas/simple-market/MarketTokenType.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSupplyTokenTypeSalesResult",
+    "summary": "Supply of sales by token type",
+    "description": "Supply of sales by token type",
+    "schema": {
+      "$ref": "../standards/schemas/U64.json"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "tagFormat": "${version}",
+  "branches": ["main"],
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    ["@open-rpc/semantic-release-plugin", {"documentLocation": "./openrpc.json"}],
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/git",
+    "@semantic-release/npm"
+  ],
+  "verifyConditions": [
+    "@semantic-release/exec",
+    "@semantic-release/changelog",
+    ["@open-rpc/semantic-release-plugin", {"documentLocation": "./openrpc.json"}],
+    "@semantic-release/npm",
+    "@semantic-release/git",
+    "@semantic-release/github"
+  ],
+  "prepare": [
+    "@semantic-release/changelog",
+    ["@open-rpc/semantic-release-plugin", {"documentLocation": "./openrpc.json"}]
+  ],
+  "publish": [
+    ["@semantic-release/exec", { "publishCmd": "./publish.sh" } ],
+    "@semantic-release/github",
+    "@semantic-release/npm"
+  ],
+  "success": [
+    "@semantic-release/github"
+  ],
+  "fail": [
+    "@semantic-release/github"
+  ]
+}

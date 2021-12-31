@@ -1,0 +1,13 @@
+{
+  "openrpcDocument": "./build/openrpc.json",
+  "outDir": "./generated-client",
+  "components": [
+      {
+          "type": "custom",
+          "name": "@swappland/market-contract-client",
+          "language": "typescript",
+          "customComponent": "@shipsgold/open-rpc-near-client-generator",
+          "customType": "client"
+      }
+  ]
+}

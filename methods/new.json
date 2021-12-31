@@ -1,0 +1,47 @@
+{
+  "name": "new",
+  "summary": "Instantiate market contract",
+  "description": "Instantiate market contract",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "owner_id",
+      "summary": "The owner of the contract",
+      "description": "The owner of the contract",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "ft_token_ids",
+      "summary": "Fungible tokens to support",
+      "description": "Fungible tokens to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountIds.json"
+      },
+      "required": false 
+    },
+    {
+      "name": "bid_history_length",
+      "summary": "The bid history length",
+      "description": "The bid history length",
+      "schema": {
+        "$ref": "../standards/schemas/simple-market/BidHistoryLength.json"
+      },
+      "required": false 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleNewResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}

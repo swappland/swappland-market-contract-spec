@@ -1,0 +1,29 @@
+{
+  "name": "get_supply_by_owner_id",
+  "summary": "Get supply of sales  by owner id",
+  "description": "Get supply of sales by owner id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "account_id",
+      "summary": "Owner account id",
+      "description": "Owner account id",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": false
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSupplySalesResult",
+    "summary": "Supply of sales",
+    "description": "Supply of sales",
+    "schema": {
+      "$ref": "../standards/schemas/U64.json"
+    }
+  }
+}

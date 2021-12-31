@@ -1,0 +1,70 @@
+{
+  "openrpc": "1.0.0",
+  "info": {
+      "title": "SwapplandMarket",
+      "version": "0.0.0-development"
+  },
+  "methods": [
+
+      {
+          "$ref": "./methods/new.json"
+      },
+      {
+          "$ref": "./methods/add_ft_token_ids.json"
+      },
+      {
+          "$ref": "./methods/offer.json"
+      },
+      {
+          "$ref": "./methods/nft_offer.json"
+      },
+      {
+          "$ref": "./methods/accept_offer.json"
+      },
+      {
+          "$ref": "./methods/update_price.json"
+      },
+      {
+          "$ref": "./methods/remove_sale.json"
+      },
+      {
+          "$ref": "./methods/get_sale.json"
+      },
+      {
+          "$ref": "./methods/get_sales_by_owner_id.json"
+      },
+      {
+          "$ref": "./methods/get_sales_by_nft_contract_id.json"
+      },
+      {
+          "$ref": "./methods/get_sales_by_nft_token_type.json"
+      },
+      {
+          "$ref": "./methods/get_supply_by_owner_id.json"
+      },
+      {
+          "$ref": "./methods/get_supply_by_nft_contract_id.json"
+      },
+      {
+          "$ref": "./methods/get_supply_by_nft_token_type.json"
+      },
+      {
+          "$ref": "./methods/get_supply_sales.json"
+      },
+      {
+          "$ref": "./standards/methods/storage/storage_balance_bounds.json"
+      },
+      {
+          "$ref": "./standards/methods/storage/storage_balance_of.json"
+      },
+      {
+          "$ref": "./standards/methods/storage/storage_deposit.json"
+      },
+      {
+          "$ref": "./standards/methods/storage/storage_unregister.json"
+      },
+      {
+          "$ref": "./standards/methods/storage/storage_withdraw.json"
+      }
+    ]
+}

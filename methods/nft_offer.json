@@ -1,0 +1,29 @@
+{
+  "name": "nft_offer",
+  "summary": "NFT token offer",
+  "description": "Accept nft token offer",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "offer",
+      "summary": "Non fungible token offer",
+      "description": "Non fungible token offer",
+      "schema": {
+        "$ref": "../standards/schemas/simple-market/NftBuyOffer.json"
+      },
+      "required": true
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleNftOfferResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}

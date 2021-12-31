@@ -1,0 +1,56 @@
+{
+  "name": "update_price",
+  "summary": "Update the price",
+  "description": "Remove sale from market place",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_id",
+      "summary": "Non fungible contract id",
+      "description": "Fungible tokens to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "token_id",
+      "summary": "NFT token id to support",
+      "description": "NFT token id to support",
+      "schema": {
+        "$ref": "../standards/schemas/TokenId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "ft_token_id",
+      "summary": "FT token id to support",
+      "description": "FT token id to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "price",
+      "summary": "Price in the denomination of the token",
+      "description": "Price in the denomination of the token",
+      "schema": {
+        "$ref": "../standards/schemas/U128.json"
+      },
+      "required": true
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleUpdatePriceResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}

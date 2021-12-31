@@ -1,0 +1,29 @@
+{
+  "name": "add_ft_token_ids",
+  "summary": "Add tokens to accept as currency",
+  "description": "Add tokens to accept as currency",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "ft_token_ids",
+      "summary": "Fungible tokens to support",
+      "description": "Fungible tokens to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountIds.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleBoolsResult",
+    "summary": "Returns whether or not tokens were added",
+    "description": "Returns whether or not tokens were added",
+    "schema": {
+      "$ref": "../standards/schemas/simple-market/Booleans.json"
+    }
+  }
+}

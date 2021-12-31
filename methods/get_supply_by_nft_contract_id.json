@@ -1,0 +1,29 @@
+{
+  "name": "get_supply_by_nft_contract_id",
+  "summary": "Get supply by nft contract id",
+  "description": "Get supply by nft contract id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_id",
+      "summary": "Nft contract id",
+      "description": "Nft contract id",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSupplySalesNFTResult",
+    "summary": "Supply of sales",
+    "description": "Supply of sales",
+    "schema": {
+      "$ref": "../standards/schemas/U64.json"
+    }
+  }
+}

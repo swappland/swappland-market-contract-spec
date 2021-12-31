@@ -1,0 +1,30 @@
+{
+  "name": "get_sale",
+  "summary": "Get sales by nft contract id",
+  "description": "Get sales by nft contract id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_token",
+      "summary": "ContractTokenId formatted sale id to retrieve sale",
+      "description": "ContractTokenId formatted sale id contractid||tokenid",
+      "schema": {
+        "$ref": "../standards/schemas/simple-market/ContractTokenId.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSalesByNFTContractResult",
+    "summary": "Sales",
+    "required": false,
+    "description": "Sales by owner in a vector",
+    "schema": {
+      "$ref": "../standards/schemas/simple-market/Sale.json"
+    }
+  }
+}

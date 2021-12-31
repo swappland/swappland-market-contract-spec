@@ -1,0 +1,47 @@
+{
+  "name": "get_sales_by_nft_contract_id",
+  "summary": "Get sales by nft contract id",
+  "description": "Get sales by nft contract id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_id",
+      "summary": "NFT contract id",
+      "description": "NFT contract id to query against",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "from_index",
+      "summary": "From index value",
+      "description": "From index value",
+      "schema": {
+        "$ref": "../standards/schemas/U64.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "limit",
+      "summary": "Limit to set iteration to rel. to index ",
+      "description": "Limit to set iteration to rel. to index",
+      "schema": {
+        "$ref": "../standards/schemas/Limit.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSalesByNFTContractResult",
+    "summary": "Sales",
+    "description": "Sales by owner in a vector",
+    "schema": {
+      "$ref": "../standards/schemas/simple-market/Sales.json"
+    }
+  }
+}

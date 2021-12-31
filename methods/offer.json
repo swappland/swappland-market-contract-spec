@@ -1,0 +1,38 @@
+{
+  "name": "offer",
+  "summary": "Offer a token id ",
+  "description": "Remove sale from market place",
+  "tags": [
+    {
+      "$ref": "../standards/tags/change.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "nft_contract_id",
+      "summary": "Non fungible contract id",
+      "description": "Fungible tokens to support",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
+      "name": "token_id",
+      "summary": "NFT token id to support",
+      "description": "NFT token id to support",
+      "schema": {
+        "$ref": "../standards/schemas/TokenId.json"
+      },
+      "required": true
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleOfferSalesResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}
