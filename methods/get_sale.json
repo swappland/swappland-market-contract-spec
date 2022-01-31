@@ -9,11 +9,11 @@
   ],
   "params": [
     {
-      "name": "nft_contract_token",
-      "summary": "ContractTokenId formatted sale id to retrieve sale",
-      "description": "ContractTokenId formatted sale id contractid||tokenid",
+      "name": "sale_id",
+      "summary": "SaleId sale id to retrieve sale",
+      "description": "sale id to retrieve sale",
       "schema": {
-        "$ref": "../standards/schemas/simple-market/ContractTokenId.json"
+        "$ref": "../standards/schemas/simple-market/SaleId.json"
       },
       "required": true 
     }

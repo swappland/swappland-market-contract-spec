@@ -1,0 +1,48 @@
+{
+  "name": "nft_list",
+  "summary": "List your nft/ft for sale for an nft/ft",
+  "description": "List your nft/ft for sale for an nft/ft",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "sale_conditions",
+      "summary": "Sale conditions required for sale aka. what you're looking for",
+      "description": "sale conditions required for sale",
+      "schema": {
+        "$ref": "../standards/schemas/simple-market/SaleConditions.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "sale_item",
+      "summary": "The item being listed for sale",
+      "description": "The item being listed for sale",
+      "schema": {
+        "$ref": "../schemas/SaleItem.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "sale_approval_id",
+      "summary": "The approval id for the item being sold",
+      "description": "The approval id for the item being sold",
+      "schema": {
+        "$ref": "../standards/schemas/ApprovalId.json"
+      },
+      "required":  false
+    }
+    
+  ],
+  "result": {
+    "name": "MarketSimpleNftListResult",
+    "summary": "Void",
+    "description": "Void",
+    "schema": {
+      "type": "null"
+    }
+  }
+}

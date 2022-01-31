@@ -19,6 +19,9 @@
           "$ref": "./methods/nft_offer.json"
       },
       {
+          "$ref": "./methods/nft_list.json"
+      },
+      {
           "$ref": "./methods/accept_offer.json"
       },
       {
