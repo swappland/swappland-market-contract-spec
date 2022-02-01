@@ -30,7 +30,7 @@ jobs:
   build:
     <<: *defaults
     docker:
-      - image: circleci/node:16.1.0
+      - image: circleci/node:16.13.2
     steps:
       - checkout
       - restore_cache: *restore-deps-cache
@@ -41,7 +41,7 @@ jobs:
   release:
     <<: *defaults
     docker:
-      - image: circleci/node:16.1.0
+      - image: circleci/node:16.13.2
     steps:
       - checkout
       - run: npm install
