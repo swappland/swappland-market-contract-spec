@@ -39,10 +39,10 @@
   ],
   "result": {
     "name": "MarketSimpleNftListResult",
-    "summary": "Void",
-    "description": "Void",
+    "summary": "Returns the sales id ",
+    "description": "The sales_id for the listing",
     "schema": {
-      "type": "null"
+      "$ref": "../standards/schemas/simple-market/SaleId.json"
     }
   }
 }

@@ -217,8 +217,8 @@
       "description": "List your nft/ft for sale for an nft/ft",
       "tags": [
         {
-          "name": "view",
-          "description": "View only methods"
+          "name": "change",
+          "description": "change method"
         }
       ],
       "params": [
@@ -392,10 +392,11 @@
       ],
       "result": {
         "name": "MarketSimpleNftListResult",
-        "summary": "Void",
-        "description": "Void",
+        "summary": "Returns the sales id ",
+        "description": "The sales_id for the listing",
         "schema": {
-          "type": "null"
+          "title": "SaleId",
+          "type": "string"
         }
       }
     },
