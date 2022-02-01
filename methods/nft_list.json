@@ -4,7 +4,7 @@
   "description": "List your nft/ft for sale for an nft/ft",
   "tags": [
     {
-      "$ref": "../standards/tags/view.json"
+      "$ref": "../standards/tags/change.json"
     }
   ],
   "params": [
