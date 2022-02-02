@@ -41,7 +41,7 @@
     "summary": "Sales",
     "description": "Sales by owner in a vector",
     "schema": {
-      "$ref": "../standards/schemas/simple-market/Sales.json"
+      "$ref": "../schemas/Sales.json"
     }
   }
 }

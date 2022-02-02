@@ -13,7 +13,7 @@
       "summary": "Sale conditions required for sale aka. what you're looking for",
       "description": "sale conditions required for sale",
       "schema": {
-        "$ref": "../standards/schemas/simple-market/SaleConditions.json"
+        "$ref": "../schemas/SaleConditions.json"
       },
       "required": true 
     },
@@ -42,7 +42,7 @@
     "summary": "Returns the sales id ",
     "description": "The sales_id for the listing",
     "schema": {
-      "$ref": "../standards/schemas/simple-market/SaleId.json"
+      "$ref": "../schemas/SaleId.json"
     }
   }
 }

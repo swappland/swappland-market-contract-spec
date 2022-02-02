@@ -1,0 +1,6 @@
+{
+  "title": "BidHistoryLength",
+  "minimum": 0,
+  "maximum": 255,
+  "type": "integer"
+}

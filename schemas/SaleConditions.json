@@ -1,0 +1,7 @@
+{
+  "title": "SaleConditions",
+  "type": "array",
+  "items": [{
+    "$ref": "./SaleCondition.json"
+  }]
+}

@@ -247,7 +247,7 @@
                           "type": "string",
                           "description": "AccountId for the near account"
                         },
-                        "price": {
+                        "amount": {
                           "title": "U128",
                           "type": "string",
                           "description": "U128 integer as string"
@@ -591,15 +591,25 @@
               "description": "expected approval ID. A number smaller than 2^53",
               "type": "number"
             },
-            "nft_contract_id": {
-              "title": "AccountId",
-              "type": "string",
-              "description": "AccountId for the near account"
-            },
-            "token_id": {
-              "title": "TokenId",
-              "description": "Token identifier that corresponds to an id",
-              "type": "string"
+            "item_for_sale": {
+              "title": "ItemForSale",
+              "type": "object",
+              "properties": {
+                "contract_id": {
+                  "title": "AccountId",
+                  "type": "string",
+                  "description": "AccountId for the near account"
+                },
+                "token_id": {
+                  "title": "TokenId",
+                  "description": "Token identifier that corresponds to an id",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "contract_id",
+                "token_id"
+              ]
             },
             "sale_id": {
               "title": "SaleId",
@@ -626,7 +636,7 @@
                             "type": "string",
                             "description": "AccountId for the near account"
                           },
-                          "price": {
+                          "amount": {
                             "title": "U128",
                             "type": "string",
                             "description": "U128 integer as string"
@@ -728,28 +738,6 @@
                 }
               ]
             },
-            "bids": {
-              "title": "Bids",
-              "type": "array",
-              "items": [
-                {
-                  "title": "Bid",
-                  "type": "object",
-                  "properties": {
-                    "owner_id": {
-                      "title": "AccountId",
-                      "type": "string",
-                      "description": "AccountId for the near account"
-                    },
-                    "price": {
-                      "title": "U128",
-                      "type": "string",
-                      "description": "U128 integer as string"
-                    }
-                  }
-                }
-              ]
-            },
             "created_at": {
               "title": "U64",
               "type": "string",
@@ -758,12 +746,9 @@
           },
           "required": [
             "owner_id",
-            "approval_id",
-            "nft_contract_id",
-            "token_id",
+            "item_for_sale",
             "sale_id",
             "sales_conditions",
-            "bids",
             "created_at"
           ]
         }
@@ -836,15 +821,25 @@
                   "description": "expected approval ID. A number smaller than 2^53",
                   "type": "number"
                 },
-                "nft_contract_id": {
-                  "title": "AccountId",
-                  "type": "string",
-                  "description": "AccountId for the near account"
-                },
-                "token_id": {
-                  "title": "TokenId",
-                  "description": "Token identifier that corresponds to an id",
-                  "type": "string"
+                "item_for_sale": {
+                  "title": "ItemForSale",
+                  "type": "object",
+                  "properties": {
+                    "contract_id": {
+                      "title": "AccountId",
+                      "type": "string",
+                      "description": "AccountId for the near account"
+                    },
+                    "token_id": {
+                      "title": "TokenId",
+                      "description": "Token identifier that corresponds to an id",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "contract_id",
+                    "token_id"
+                  ]
                 },
                 "sale_id": {
                   "title": "SaleId",
@@ -871,7 +866,7 @@
                                 "type": "string",
                                 "description": "AccountId for the near account"
                               },
-                              "price": {
+                              "amount": {
                                 "title": "U128",
                                 "type": "string",
                                 "description": "U128 integer as string"
@@ -973,28 +968,6 @@
                     }
                   ]
                 },
-                "bids": {
-                  "title": "Bids",
-                  "type": "array",
-                  "items": [
-                    {
-                      "title": "Bid",
-                      "type": "object",
-                      "properties": {
-                        "owner_id": {
-                          "title": "AccountId",
-                          "type": "string",
-                          "description": "AccountId for the near account"
-                        },
-                        "price": {
-                          "title": "U128",
-                          "type": "string",
-                          "description": "U128 integer as string"
-                        }
-                      }
-                    }
-                  ]
-                },
                 "created_at": {
                   "title": "U64",
                   "type": "string",
@@ -1003,12 +976,9 @@
               },
               "required": [
                 "owner_id",
-                "approval_id",
-                "nft_contract_id",
-                "token_id",
+                "item_for_sale",
                 "sale_id",
                 "sales_conditions",
-                "bids",
                 "created_at"
               ]
             }
@@ -1083,15 +1053,25 @@
                   "description": "expected approval ID. A number smaller than 2^53",
                   "type": "number"
                 },
-                "nft_contract_id": {
-                  "title": "AccountId",
-                  "type": "string",
-                  "description": "AccountId for the near account"
-                },
-                "token_id": {
-                  "title": "TokenId",
-                  "description": "Token identifier that corresponds to an id",
-                  "type": "string"
+                "item_for_sale": {
+                  "title": "ItemForSale",
+                  "type": "object",
+                  "properties": {
+                    "contract_id": {
+                      "title": "AccountId",
+                      "type": "string",
+                      "description": "AccountId for the near account"
+                    },
+                    "token_id": {
+                      "title": "TokenId",
+                      "description": "Token identifier that corresponds to an id",
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "contract_id",
+                    "token_id"
+                  ]
                 },
                 "sale_id": {
                   "title": "SaleId",
@@ -1118,7 +1098,7 @@
                                 "type": "string",
                                 "description": "AccountId for the near account"
                               },
-                              "price": {
+                              "amount": {
                                 "title": "U128",
                                 "type": "string",
                                 "description": "U128 integer as string"
@@ -1220,28 +1200,6 @@
                     }
                   ]
                 },
-                "bids": {
-                  "title": "Bids",
-                  "type": "array",
-                  "items": [
-                    {
-                      "title": "Bid",
-                      "type": "object",
-                      "properties": {
-                        "owner_id": {
-                          "title": "AccountId",
-                          "type": "string",
-                          "description": "AccountId for the near account"
-                        },
-                        "price": {
-                          "title": "U128",
-                          "type": "string",
-                          "description": "U128 integer as string"
-                        }
-                      }
-                    }
-                  ]
-                },
                 "created_at": {
                   "title": "U64",
                   "type": "string",
@@ -1250,258 +1208,9 @@
               },
               "required": [
                 "owner_id",
-                "approval_id",
-                "nft_contract_id",
-                "token_id",
+                "item_for_sale",
                 "sale_id",
                 "sales_conditions",
-                "bids",
-                "created_at"
-              ]
-            }
-          ]
-        }
-      }
-    },
-    {
-      "name": "get_sales_by_nft_token_type",
-      "summary": "Get sales by nft contract id",
-      "description": "Get sales by nft contract id",
-      "tags": [
-        {
-          "name": "view",
-          "description": "View only methods"
-        }
-      ],
-      "params": [
-        {
-          "name": "token_type",
-          "summary": "Token type parameter for contract",
-          "description": "Token type parameter for contract",
-          "schema": {
-            "title": "MarketTokenType",
-            "type": "string"
-          },
-          "required": true
-        },
-        {
-          "name": "from_index",
-          "summary": "From index value",
-          "description": "From index value",
-          "schema": {
-            "title": "U64",
-            "type": "string",
-            "description": "U64 integer as string"
-          },
-          "required": true
-        },
-        {
-          "name": "limit",
-          "summary": "Limit to set iteration to rel. to index ",
-          "description": "Limit to set iteration to rel. to index",
-          "schema": {
-            "title": "Limit",
-            "description": "Limit for setting pagination u64 constrainted by 2^53 js limit",
-            "type": "integer"
-          },
-          "required": true
-        }
-      ],
-      "result": {
-        "name": "MarketSimpleSalesByNFTContractResult",
-        "summary": "Sales",
-        "description": "Sales by owner in a vector",
-        "schema": {
-          "title": "Sales",
-          "type": "array",
-          "items": [
-            {
-              "title": "Sale",
-              "type": "object",
-              "properties": {
-                "owner_id": {
-                  "title": "AccountId",
-                  "type": "string",
-                  "description": "AccountId for the near account"
-                },
-                "approval_id": {
-                  "title": "ApprovalId",
-                  "description": "expected approval ID. A number smaller than 2^53",
-                  "type": "number"
-                },
-                "nft_contract_id": {
-                  "title": "AccountId",
-                  "type": "string",
-                  "description": "AccountId for the near account"
-                },
-                "token_id": {
-                  "title": "TokenId",
-                  "description": "Token identifier that corresponds to an id",
-                  "type": "string"
-                },
-                "sale_id": {
-                  "title": "SaleId",
-                  "type": "string"
-                },
-                "sale_conditions": {
-                  "title": "SaleConditions",
-                  "type": "array",
-                  "items": [
-                    {
-                      "title": "SaleCondition",
-                      "type": "object",
-                      "properties": {
-                        "ft": {
-                          "title": "FtSaleConditions",
-                          "type": "object",
-                          "properties": {},
-                          "additionalProperties": {
-                            "title": "Bid",
-                            "type": "object",
-                            "properties": {
-                              "owner_id": {
-                                "title": "AccountId",
-                                "type": "string",
-                                "description": "AccountId for the near account"
-                              },
-                              "price": {
-                                "title": "U128",
-                                "type": "string",
-                                "description": "U128 integer as string"
-                              }
-                            }
-                          }
-                        },
-                        "nft": {
-                          "title": "NftSaleConditions",
-                          "type": "object",
-                          "properties": {},
-                          "patternProperties": {
-                            ".*": {
-                              "title": "NftMetadataFilter",
-                              "type": "object",
-                              "properties": {
-                                "token_id": {
-                                  "title": "TokenId",
-                                  "description": "Token identifier that corresponds to an id",
-                                  "type": "string"
-                                },
-                                "token_id_regex": {
-                                  "title": "TokenIdRegex",
-                                  "type": "string"
-                                },
-                                "metadata": {
-                                  "title": "NFTTokenMetadata",
-                                  "type": "object",
-                                  "properties": {
-                                    "title": {
-                                      "type": "string",
-                                      "title": "NFTTokenMetadataTitle",
-                                      "description": "ex. Parcel #5055"
-                                    },
-                                    "description": {
-                                      "type": "string",
-                                      "title": "NFTTokenMetadataDesc",
-                                      "description": "free-form description"
-                                    },
-                                    "media": {
-                                      "type": "string",
-                                      "title": "NFTTokenMetadataMedia",
-                                      "description": "URL to associated media, preferably to decentralized, content-addressed storage"
-                                    },
-                                    "media_hash": {
-                                      "type": "string",
-                                      "title": "NFTTokenMetadataMediaHash",
-                                      "description": "Base64-encoded sha256 hash of content referenced by the `media` field. Required if `media` is included."
-                                    },
-                                    "issued_at": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataIssuedAt",
-                                      "description": "When token was issued or minted, Unix epoc in milliseconds"
-                                    },
-                                    "expires_at": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataExpiresAt",
-                                      "description": "When token expires, Unix epoch in milliseconds"
-                                    },
-                                    "starts_at": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataStartsAt",
-                                      "description": "When token starts being valid, Unix epoch in milliseconds"
-                                    },
-                                    "updated_at": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataUpdatedAt",
-                                      "description": "When token was last updated, Unix epoch in milliseconds"
-                                    },
-                                    "extra": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataExtra",
-                                      "description": "Anything extra the MT wants to store on-chain. Can be stringified JSON."
-                                    },
-                                    "reference": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataReference",
-                                      "description": "URL to an off-chain JSON file with more info."
-                                    },
-                                    "reference_hash": {
-                                      "type": "string",
-                                      "title": "NFTokenMetadataReferenceHash",
-                                      "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
-                                    }
-                                  }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
-                                }
-                              },
-                              "additionalProperties": false
-                            }
-                          },
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  ]
-                },
-                "bids": {
-                  "title": "Bids",
-                  "type": "array",
-                  "items": [
-                    {
-                      "title": "Bid",
-                      "type": "object",
-                      "properties": {
-                        "owner_id": {
-                          "title": "AccountId",
-                          "type": "string",
-                          "description": "AccountId for the near account"
-                        },
-                        "price": {
-                          "title": "U128",
-                          "type": "string",
-                          "description": "U128 integer as string"
-                        }
-                      }
-                    }
-                  ]
-                },
-                "created_at": {
-                  "title": "U64",
-                  "type": "string",
-                  "description": "U64 integer as string"
-                }
-              },
-              "required": [
-                "owner_id",
-                "approval_id",
-                "nft_contract_id",
-                "token_id",
-                "sale_id",
-                "sales_conditions",
-                "bids",
                 "created_at"
               ]
             }
@@ -1570,39 +1279,6 @@
         "name": "MarketSimpleSupplySalesNFTResult",
         "summary": "Supply of sales",
         "description": "Supply of sales",
-        "schema": {
-          "title": "U64",
-          "type": "string",
-          "description": "U64 integer as string"
-        }
-      }
-    },
-    {
-      "name": "get_supply_by_nft_token_type",
-      "summary": "Get supply by nft contract id",
-      "description": "Get supply by nft contract id",
-      "tags": [
-        {
-          "name": "view",
-          "description": "View only methods"
-        }
-      ],
-      "params": [
-        {
-          "name": "token_type",
-          "summary": "Token type parameter for contract",
-          "description": "Token type parameter for contract",
-          "schema": {
-            "title": "MarketTokenType",
-            "type": "string"
-          },
-          "required": true
-        }
-      ],
-      "result": {
-        "name": "MarketSimpleSupplyTokenTypeSalesResult",
-        "summary": "Supply of sales by token type",
-        "description": "Supply of sales by token type",
         "schema": {
           "title": "U64",
           "type": "string",

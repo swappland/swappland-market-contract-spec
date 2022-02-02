@@ -1,0 +1,10 @@
+{
+  "title": "FtSaleConditions",
+  "type": "object",
+  "properties": {
+
+  },
+  "additionalProperties": {
+    "$ref": "./Bid.json"
+  }
+}

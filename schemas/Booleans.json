@@ -1,0 +1,7 @@
+{
+  "title": "Booleans",
+  "type": "array",
+  "items": [{
+    "type": "boolean"
+  }]
+}

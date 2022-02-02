@@ -1,0 +1,31 @@
+{
+  "title": "Sale",
+  "type": "object",
+  "properties": {
+    "owner_id": {
+      "$ref": "../standards/schemas/AccountId.json"
+    },
+    "approval_id": {
+      "$ref": "../standards/schemas/ApprovalId.json"
+    },
+    "item_for_sale": {
+      "$ref": "./ItemForSale.json"
+    },
+    "sale_id": {
+      "$ref": "./SaleId.json"
+    },
+    "sale_conditions": {
+      "$ref": "./SaleConditions.json"
+    },
+    "created_at": {
+      "$ref": "../standards/schemas/U64.json"
+    }
+  },
+  "required": [
+    "owner_id",
+    "item_for_sale",
+    "sale_id",
+    "sales_conditions",
+    "created_at"
+  ]
+}

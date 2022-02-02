@@ -1,0 +1,12 @@
+{
+  "title": "SaleCondition",
+  "type": "object",
+  "properties": {
+    "ft": {
+      "$ref": "./FtSaleConditions.json"
+    },
+    "nft": {
+      "$ref": "./NftSaleConditions.json"
+    }
+  }
+}

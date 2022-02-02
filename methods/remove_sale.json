@@ -13,7 +13,7 @@
       "summary": "Sale id for removal",
       "description": "Sale id for removing the associated sale",
       "schema": {
-        "$ref": "../standards/schemas/simple-market/SaleId.json"
+        "$ref": "../schemas/SaleId.json"
       },
       "required": true
     }

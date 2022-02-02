@@ -23,7 +23,7 @@
     "summary": "Returns whether or not tokens were added",
     "description": "Returns whether or not tokens were added",
     "schema": {
-      "$ref": "../standards/schemas/simple-market/Booleans.json"
+      "$ref": "../schemas/Booleans.json"
     }
   }
 }

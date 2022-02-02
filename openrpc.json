@@ -40,16 +40,10 @@
           "$ref": "./methods/get_sales_by_nft_contract_id.json"
       },
       {
-          "$ref": "./methods/get_sales_by_nft_token_type.json"
-      },
-      {
           "$ref": "./methods/get_supply_by_owner_id.json"
       },
       {
           "$ref": "./methods/get_supply_by_nft_contract_id.json"
-      },
-      {
-          "$ref": "./methods/get_supply_by_nft_token_type.json"
       },
       {
           "$ref": "./methods/get_supply_sales.json"

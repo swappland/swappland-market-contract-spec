@@ -1,0 +1,16 @@
+{
+  "title": "ItemForSale",
+  "type": "object",
+  "properties": {
+    "contract_id": {
+      "$ref": "../standards/schemas/AccountId.json"
+    },
+    "token_id": {
+      "$ref": "../standards/schemas/TokenId.json"
+    }
+  },
+  "required": [
+    "contract_id",
+    "token_id"
+  ]
+}

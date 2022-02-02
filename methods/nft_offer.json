@@ -13,7 +13,7 @@
       "summary": "Non fungible token offer",
       "description": "Non fungible token offer",
       "schema": {
-        "$ref": "../standards/schemas/simple-market/NftBuyOffer.json"
+        "$ref": "../schemas/NftBuyOffer.json"
       },
       "required": true
     }
