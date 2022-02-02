@@ -1,0 +1,56 @@
+{
+  "name": "get_offers_by_contract_token_id",
+  "summary": "Get offers by contract and token id",
+  "description": "Get offers by contract and token id",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "contract_id",
+      "summary": "NFT contract id",
+      "description": "NFT contract id to query against",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "token_id",
+      "summary": "NFT token id",
+      "description": "NFT token id to query against",
+      "schema": {
+        "$ref": "../standards/schemas/TokenId.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "from_index",
+      "summary": "From index value",
+      "description": "From index value",
+      "schema": {
+        "$ref": "../standards/schemas/U64.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "limit",
+      "summary": "Limit to set iteration to rel. to index ",
+      "description": "Limit to set iteration to rel. to index",
+      "schema": {
+        "$ref": "../standards/schemas/Limit.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleOfferByNFTContractTokenIdResult",
+    "summary": "Sales",
+    "description": "Sales by owner in a vector",
+    "schema": {
+      "$ref": "../schemas/Sales.json"
+    }
+  }
+}
