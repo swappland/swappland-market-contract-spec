@@ -5,21 +5,21 @@
     "sale_id": {
       "$ref": "./SaleId.json"
     },
-    "offer_approval_id": {
+    "approval_id": {
       "$ref": "../standards/schemas/ApprovalId.json"
     },
-    "offer_nft_contract_id": {
+    "contract_id": {
       "$ref": "../standards/schemas/AccountId.json"
     },
-    "offer_nft_token_id": {
+    "token_id": {
       "$ref": "../standards/schemas/TokenId.json"
     }
   },
   "required": [
     "sale_id",
-    "offer_approval_id",
-    "offer_nft_contract_id",
-    "offer_nft_token_id"
+    "token_id",
+    "contract_id"
   ]
+  
   
 }

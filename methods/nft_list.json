@@ -9,11 +9,11 @@
   ],
   "params": [
     {
-      "name": "sale_conditions",
+      "name": "sale_args",
       "summary": "Sale conditions required for sale aka. what you're looking for",
       "description": "sale conditions required for sale",
       "schema": {
-        "$ref": "../schemas/SaleConditions.json"
+        "$ref": "../schemas/SaleArgs.json"
       },
       "required": true 
     },

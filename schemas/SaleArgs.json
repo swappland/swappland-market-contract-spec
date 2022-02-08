@@ -1,0 +1,16 @@
+{
+  "title": "SaleArgs",
+  "type": "object",
+  "properties": {
+    "account_condition": {
+      "$ref": "./AccountCondition.json"
+    },
+    "sale_conditions": {
+      "$ref": "./SaleConditions.json"
+    }
+  },
+  "required": [
+    "sale_conditions"
+  ]
+
+}

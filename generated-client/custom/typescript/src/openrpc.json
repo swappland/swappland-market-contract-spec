@@ -176,17 +176,17 @@
                 "title": "SaleId",
                 "type": "string"
               },
-              "offer_approval_id": {
+              "approval_id": {
                 "title": "ApprovalId",
                 "description": "expected approval ID. A number smaller than 2^53",
                 "type": "number"
               },
-              "offer_nft_contract_id": {
+              "contract_id": {
                 "title": "AccountId",
                 "type": "string",
                 "description": "AccountId for the near account"
               },
-              "offer_nft_token_id": {
+              "token_id": {
                 "title": "TokenId",
                 "description": "Token identifier that corresponds to an id",
                 "type": "string"
@@ -194,9 +194,8 @@
             },
             "required": [
               "sale_id",
-              "offer_approval_id",
-              "offer_nft_contract_id",
-              "offer_nft_token_id"
+              "token_id",
+              "contract_id"
             ]
           },
           "required": true
@@ -223,130 +222,143 @@
       ],
       "params": [
         {
-          "name": "sale_conditions",
+          "name": "sale_args",
           "summary": "Sale conditions required for sale aka. what you're looking for",
           "description": "sale conditions required for sale",
           "schema": {
-            "title": "SaleConditions",
-            "type": "array",
-            "items": [
-              {
-                "title": "SaleCondition",
-                "type": "object",
-                "properties": {
-                  "ft": {
-                    "title": "FtSaleConditions",
+            "title": "SaleArgs",
+            "type": "object",
+            "properties": {
+              "account_condition": {
+                "title": "AccountCondition",
+                "type": "string"
+              },
+              "sale_conditions": {
+                "title": "SaleConditions",
+                "type": "array",
+                "items": [
+                  {
+                    "title": "SaleCondition",
                     "type": "object",
-                    "properties": {},
-                    "additionalProperties": {
-                      "title": "Bid",
-                      "type": "object",
-                      "properties": {
-                        "owner_id": {
-                          "title": "AccountId",
-                          "type": "string",
-                          "description": "AccountId for the near account"
-                        },
-                        "amount": {
-                          "title": "U128",
-                          "type": "string",
-                          "description": "U128 integer as string"
-                        }
-                      }
-                    }
-                  },
-                  "nft": {
-                    "title": "NftSaleConditions",
-                    "type": "object",
-                    "properties": {},
-                    "patternProperties": {
-                      ".*": {
-                        "title": "NftMetadataFilter",
+                    "properties": {
+                      "ft": {
+                        "title": "FtSaleConditions",
                         "type": "object",
-                        "properties": {
-                          "token_id": {
-                            "title": "TokenId",
-                            "description": "Token identifier that corresponds to an id",
-                            "type": "string"
-                          },
-                          "token_id_regex": {
-                            "title": "TokenIdRegex",
-                            "type": "string"
-                          },
-                          "metadata": {
-                            "title": "NFTTokenMetadata",
+                        "properties": {},
+                        "additionalProperties": {
+                          "title": "Bid",
+                          "type": "object",
+                          "properties": {
+                            "owner_id": {
+                              "title": "AccountId",
+                              "type": "string",
+                              "description": "AccountId for the near account"
+                            },
+                            "amount": {
+                              "title": "U128",
+                              "type": "string",
+                              "description": "U128 integer as string"
+                            }
+                          }
+                        }
+                      },
+                      "nft": {
+                        "title": "NftSaleConditions",
+                        "type": "object",
+                        "properties": {},
+                        "patternProperties": {
+                          ".*": {
+                            "title": "NftMetadataFilter",
                             "type": "object",
                             "properties": {
-                              "title": {
-                                "type": "string",
-                                "title": "NFTTokenMetadataTitle",
-                                "description": "ex. Parcel #5055"
+                              "token_id": {
+                                "title": "TokenId",
+                                "description": "Token identifier that corresponds to an id",
+                                "type": "string"
                               },
-                              "description": {
-                                "type": "string",
-                                "title": "NFTTokenMetadataDesc",
-                                "description": "free-form description"
+                              "token_id_regex": {
+                                "title": "TokenIdRegex",
+                                "type": "string"
                               },
-                              "media": {
-                                "type": "string",
-                                "title": "NFTTokenMetadataMedia",
-                                "description": "URL to associated media, preferably to decentralized, content-addressed storage"
+                              "metadata": {
+                                "title": "NFTTokenMetadata",
+                                "type": "object",
+                                "properties": {
+                                  "title": {
+                                    "type": "string",
+                                    "title": "NFTTokenMetadataTitle",
+                                    "description": "ex. Parcel #5055"
+                                  },
+                                  "description": {
+                                    "type": "string",
+                                    "title": "NFTTokenMetadataDesc",
+                                    "description": "free-form description"
+                                  },
+                                  "media": {
+                                    "type": "string",
+                                    "title": "NFTTokenMetadataMedia",
+                                    "description": "URL to associated media, preferably to decentralized, content-addressed storage"
+                                  },
+                                  "media_hash": {
+                                    "type": "string",
+                                    "title": "NFTTokenMetadataMediaHash",
+                                    "description": "Base64-encoded sha256 hash of content referenced by the `media` field. Required if `media` is included."
+                                  },
+                                  "issued_at": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataIssuedAt",
+                                    "description": "When token was issued or minted, Unix epoc in milliseconds"
+                                  },
+                                  "expires_at": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataExpiresAt",
+                                    "description": "When token expires, Unix epoch in milliseconds"
+                                  },
+                                  "starts_at": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataStartsAt",
+                                    "description": "When token starts being valid, Unix epoch in milliseconds"
+                                  },
+                                  "updated_at": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataUpdatedAt",
+                                    "description": "When token was last updated, Unix epoch in milliseconds"
+                                  },
+                                  "extra": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataExtra",
+                                    "description": "Anything extra the MT wants to store on-chain. Can be stringified JSON."
+                                  },
+                                  "reference": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataReference",
+                                    "description": "URL to an off-chain JSON file with more info."
+                                  },
+                                  "reference_hash": {
+                                    "type": "string",
+                                    "title": "NFTokenMetadataReferenceHash",
+                                    "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
+                                  }
+                                }
                               },
-                              "media_hash": {
+                              "receiver": {
+                                "title": "AccountId",
                                 "type": "string",
-                                "title": "NFTTokenMetadataMediaHash",
-                                "description": "Base64-encoded sha256 hash of content referenced by the `media` field. Required if `media` is included."
-                              },
-                              "issued_at": {
-                                "type": "string",
-                                "title": "NFTokenMetadataIssuedAt",
-                                "description": "When token was issued or minted, Unix epoc in milliseconds"
-                              },
-                              "expires_at": {
-                                "type": "string",
-                                "title": "NFTokenMetadataExpiresAt",
-                                "description": "When token expires, Unix epoch in milliseconds"
-                              },
-                              "starts_at": {
-                                "type": "string",
-                                "title": "NFTokenMetadataStartsAt",
-                                "description": "When token starts being valid, Unix epoch in milliseconds"
-                              },
-                              "updated_at": {
-                                "type": "string",
-                                "title": "NFTokenMetadataUpdatedAt",
-                                "description": "When token was last updated, Unix epoch in milliseconds"
-                              },
-                              "extra": {
-                                "type": "string",
-                                "title": "NFTokenMetadataExtra",
-                                "description": "Anything extra the MT wants to store on-chain. Can be stringified JSON."
-                              },
-                              "reference": {
-                                "type": "string",
-                                "title": "NFTokenMetadataReference",
-                                "description": "URL to an off-chain JSON file with more info."
-                              },
-                              "reference_hash": {
-                                "type": "string",
-                                "title": "NFTokenMetadataReferenceHash",
-                                "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
+                                "description": "AccountId for the near account"
                               }
-                            }
-                          },
-                          "receiver": {
-                            "title": "AccountId",
-                            "type": "string",
-                            "description": "AccountId for the near account"
+                            },
+                            "additionalProperties": false
                           }
                         },
                         "additionalProperties": false
                       }
-                    },
-                    "additionalProperties": false
+                    }
                   }
-                }
+                ]
               }
+            },
+            "required": [
+              "sale_conditions"
             ]
           },
           "required": true
