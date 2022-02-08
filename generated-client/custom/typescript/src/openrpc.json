@@ -563,6 +563,41 @@
       }
     },
     {
+      "name": "get_fee",
+      "summary": "Get fee associated with ft transfer",
+      "description": "Get fee associated with ft transfer",
+      "tags": [
+        {
+          "name": "view",
+          "description": "View only methods"
+        }
+      ],
+      "params": [
+        {
+          "name": "amount",
+          "summary": "Amount used to determine fee",
+          "description": "Amount used to determine fee",
+          "schema": {
+            "title": "U128",
+            "type": "string",
+            "description": "U128 integer as string"
+          },
+          "required": true
+        }
+      ],
+      "result": {
+        "name": "MarketSimpleFeeResult",
+        "summary": "Fee owed for contract deposit",
+        "description": "Fee owed for contract deposit",
+        "required": false,
+        "schema": {
+          "title": "U128",
+          "type": "string",
+          "description": "U128 integer as string"
+        }
+      }
+    },
+    {
       "name": "get_sale",
       "summary": "Get sales by nft contract id",
       "description": "Get sales by nft contract id",

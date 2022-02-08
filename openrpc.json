@@ -31,6 +31,9 @@
           "$ref": "./methods/remove_sale.json"
       },
       {
+        "$ref": "./methods/get_fee.json"
+      },
+      {
           "$ref": "./methods/get_sale.json"
       },
       {
