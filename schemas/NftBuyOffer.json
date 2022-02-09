@@ -17,9 +17,7 @@
   },
   "required": [
     "sale_id",
-    "token_id",
     "contract_id"
   ]
-  
   
 }
