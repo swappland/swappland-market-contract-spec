@@ -382,9 +382,7 @@
               }
             },
             "required": [
-              "amount",
-              "contract_id",
-              "token_id"
+              "contract_id"
             ]
           },
           "required": true
