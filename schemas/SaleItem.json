@@ -13,7 +13,6 @@
     }
   },
   "required": [
-    "amount",
     "contract_id"
   ]
 }
