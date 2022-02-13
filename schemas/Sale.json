@@ -5,6 +5,9 @@
     "owner_id": {
       "$ref": "../standards/schemas/AccountId.json"
     },
+    "account_condition": {
+      "$ref": "../standards/schemas/AccountId.json"
+    },
     "approval_id": {
       "$ref": "../standards/schemas/ApprovalId.json"
     },
@@ -13,6 +16,9 @@
     },
     "sale_id": {
       "$ref": "./SaleId.json"
+    },
+    "service_fee": {
+      "$ref": "../standards/schemas/U128.json"
     },
     "sale_conditions": {
       "$ref": "./SaleConditions.json"

@@ -630,6 +630,11 @@
               "type": "string",
               "description": "AccountId for the near account"
             },
+            "account_condition": {
+              "title": "AccountId",
+              "type": "string",
+              "description": "AccountId for the near account"
+            },
             "approval_id": {
               "title": "ApprovalId",
               "description": "expected approval ID. A number smaller than 2^53",
@@ -658,6 +663,11 @@
             "sale_id": {
               "title": "SaleId",
               "type": "string"
+            },
+            "service_fee": {
+              "title": "U128",
+              "type": "string",
+              "description": "U128 integer as string"
             },
             "sale_conditions": {
               "title": "SaleConditions",
@@ -860,6 +870,11 @@
                   "type": "string",
                   "description": "AccountId for the near account"
                 },
+                "account_condition": {
+                  "title": "AccountId",
+                  "type": "string",
+                  "description": "AccountId for the near account"
+                },
                 "approval_id": {
                   "title": "ApprovalId",
                   "description": "expected approval ID. A number smaller than 2^53",
@@ -888,6 +903,11 @@
                 "sale_id": {
                   "title": "SaleId",
                   "type": "string"
+                },
+                "service_fee": {
+                  "title": "U128",
+                  "type": "string",
+                  "description": "U128 integer as string"
                 },
                 "sale_conditions": {
                   "title": "SaleConditions",
@@ -1092,6 +1112,11 @@
                   "type": "string",
                   "description": "AccountId for the near account"
                 },
+                "account_condition": {
+                  "title": "AccountId",
+                  "type": "string",
+                  "description": "AccountId for the near account"
+                },
                 "approval_id": {
                   "title": "ApprovalId",
                   "description": "expected approval ID. A number smaller than 2^53",
@@ -1120,6 +1145,11 @@
                 "sale_id": {
                   "title": "SaleId",
                   "type": "string"
+                },
+                "service_fee": {
+                  "title": "U128",
+                  "type": "string",
+                  "description": "U128 integer as string"
                 },
                 "sale_conditions": {
                   "title": "SaleConditions",
@@ -1335,6 +1365,11 @@
                   "type": "string",
                   "description": "AccountId for the near account"
                 },
+                "account_condition": {
+                  "title": "AccountId",
+                  "type": "string",
+                  "description": "AccountId for the near account"
+                },
                 "approval_id": {
                   "title": "ApprovalId",
                   "description": "expected approval ID. A number smaller than 2^53",
@@ -1363,6 +1398,11 @@
                 "sale_id": {
                   "title": "SaleId",
                   "type": "string"
+                },
+                "service_fee": {
+                  "title": "U128",
+                  "type": "string",
+                  "description": "U128 integer as string"
                 },
                 "sale_conditions": {
                   "title": "SaleConditions",
