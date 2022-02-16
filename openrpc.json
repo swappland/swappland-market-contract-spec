@@ -40,6 +40,9 @@
           "$ref": "./methods/get_sales_by_owner_id.json"
       },
       {
+          "$ref": "./methods/get_sales_for_owner_id.json"
+      },
+      {
           "$ref": "./methods/get_sales_by_nft_contract_id.json"
       },
       {
