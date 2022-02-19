@@ -1,0 +1,38 @@
+{
+  "name": "get_sales",
+  "summary": "Get sales with pagination",
+  "description": "Get sales with pagination",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+    {
+      "name": "from_index",
+      "summary": "From index value",
+      "description": "From index value",
+      "schema": {
+        "$ref": "../standards/schemas/U64.json"
+      },
+      "required": true 
+    },
+    {
+      "name": "limit",
+      "summary": "Limit to set iteration to rel. to index ",
+      "description": "Limit to set iteration to rel. to index",
+      "schema": {
+        "$ref": "../standards/schemas/Limit.json"
+      },
+      "required": true 
+    }
+  ],
+  "result": {
+    "name": "MarketSimpleSalesResult",
+    "summary": "Sales",
+    "description": "Sales by contract token id in a vector",
+    "schema": {
+      "$ref": "../schemas/Sales.json"
+    }
+  }
+}

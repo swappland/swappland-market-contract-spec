@@ -37,6 +37,12 @@
           "$ref": "./methods/get_sale.json"
       },
       {
+          "$ref": "./methods/get_sales.json"
+      },
+      {
+          "$ref": "./methods/get_num_sales.json"
+      },
+      {
           "$ref": "./methods/get_sales_by_owner_id.json"
       },
       {

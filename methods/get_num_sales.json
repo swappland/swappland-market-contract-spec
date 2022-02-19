@@ -1,0 +1,20 @@
+{
+  "name": "get_num_sales",
+  "summary": "Get number of sales ",
+  "description": "Get number of sales ",
+  "tags": [
+    {
+      "$ref": "../standards/tags/view.json"
+    }
+  ],
+  "params": [
+  ],
+  "result": {
+    "name": "MarketSimpleNumSalesResult",
+    "summary": "Supply of sales",
+    "description": "Supply of sales",
+    "schema": {
+      "type": "number"
+    }
+  }
+}
