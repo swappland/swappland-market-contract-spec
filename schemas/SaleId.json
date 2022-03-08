@@ -1,4 +1,6 @@
 {
   "title": "SaleId",
-  "type": "string"
+  "type": "string",
+  "$comment": "U64 string"
+
 }

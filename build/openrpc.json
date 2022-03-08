@@ -174,7 +174,8 @@
             "properties": {
               "sale_id": {
                 "title": "SaleId",
-                "type": "string"
+                "type": "string",
+                "$comment": "U64 string"
               },
               "approval_id": {
                 "title": "ApprovalId",
@@ -339,11 +340,6 @@
                                     "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                   }
                                 }
-                              },
-                              "receiver": {
-                                "title": "AccountId",
-                                "type": "string",
-                                "description": "AccountId for the near account"
                               }
                             },
                             "additionalProperties": false
@@ -405,7 +401,8 @@
         "description": "The sales_id for the listing",
         "schema": {
           "title": "SaleId",
-          "type": "string"
+          "type": "string",
+          "$comment": "U64 string"
         }
       }
     },
@@ -545,7 +542,8 @@
           "description": "Sale id for removing the associated sale",
           "schema": {
             "title": "SaleId",
-            "type": "string"
+            "type": "string",
+            "$comment": "U64 string"
           },
           "required": true
         }
@@ -611,7 +609,8 @@
           "description": "sale id to retrieve sale",
           "schema": {
             "title": "SaleId",
-            "type": "string"
+            "type": "string",
+            "$comment": "U64 string"
           },
           "required": true
         }
@@ -662,7 +661,8 @@
             },
             "sale_id": {
               "title": "SaleId",
-              "type": "string"
+              "type": "string",
+              "$comment": "U64 string"
             },
             "service_fee": {
               "title": "U128",
@@ -776,11 +776,6 @@
                                   "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                 }
                               }
-                            },
-                            "receiver": {
-                              "title": "AccountId",
-                              "type": "string",
-                              "description": "AccountId for the near account"
                             }
                           },
                           "additionalProperties": false
@@ -891,7 +886,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string"
+                  "type": "string",
+                  "$comment": "U64 string"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1005,11 +1001,6 @@
                                       "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                     }
                                   }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
                                 }
                               },
                               "additionalProperties": false
@@ -1153,7 +1144,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string"
+                  "type": "string",
+                  "$comment": "U64 string"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1267,11 +1259,6 @@
                                       "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                     }
                                   }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
                                 }
                               },
                               "additionalProperties": false
@@ -1395,7 +1382,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string"
+                  "type": "string",
+                  "$comment": "U64 string"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1509,11 +1497,6 @@
                                       "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                     }
                                   }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
                                 }
                               },
                               "additionalProperties": false
@@ -1637,7 +1620,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string"
+                  "type": "string",
+                  "$comment": "U64 string"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1751,11 +1735,6 @@
                                       "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                     }
                                   }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
                                 }
                               },
                               "additionalProperties": false
@@ -1890,7 +1869,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string"
+                  "type": "string",
+                  "$comment": "U64 string"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -2004,11 +1984,6 @@
                                       "description": "Base64-encoded sha256 hash of JSON from reference field. Required if `reference` is included."
                                     }
                                   }
-                                },
-                                "receiver": {
-                                  "title": "AccountId",
-                                  "type": "string",
-                                  "description": "AccountId for the near account"
                                 }
                               },
                               "additionalProperties": false
