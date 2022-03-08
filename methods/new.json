@@ -18,20 +18,20 @@
       "required": true
     },
     {
+      "name": "fee_account",
+      "summary": "The services fee account",
+      "description": "The services fee account of the contract",
+      "schema": {
+        "$ref": "../standards/schemas/AccountId.json"
+      },
+      "required": true
+    },
+    {
       "name": "ft_token_ids",
       "summary": "Fungible tokens to support",
       "description": "Fungible tokens to support",
       "schema": {
         "$ref": "../standards/schemas/AccountIds.json"
-      },
-      "required": false 
-    },
-    {
-      "name": "bid_history_length",
-      "summary": "The bid history length",
-      "description": "The bid history length",
-      "schema": {
-        "$ref": "../schemas/BidHistoryLength.json"
       },
       "required": false 
     }
