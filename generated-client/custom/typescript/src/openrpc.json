@@ -28,6 +28,17 @@
           "required": true
         },
         {
+          "name": "fee_account",
+          "summary": "The services fee account",
+          "description": "The services fee account of the contract",
+          "schema": {
+            "title": "AccountId",
+            "type": "string",
+            "description": "AccountId for the near account"
+          },
+          "required": true
+        },
+        {
           "name": "ft_token_ids",
           "summary": "Fungible tokens to support",
           "description": "Fungible tokens to support",
@@ -41,18 +52,6 @@
                 "description": "AccountId for the near account"
               }
             ]
-          },
-          "required": false
-        },
-        {
-          "name": "bid_history_length",
-          "summary": "The bid history length",
-          "description": "The bid history length",
-          "schema": {
-            "title": "BidHistoryLength",
-            "minimum": 0,
-            "maximum": 255,
-            "type": "integer"
           },
           "required": false
         }
