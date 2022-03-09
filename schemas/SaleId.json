@@ -1,6 +1,6 @@
 {
   "title": "SaleId",
-  "type": "string",
-  "$comment": "U64 string"
+  "type": "integer",
+  "$comment": "u64 only 2^53 support"
 
 }

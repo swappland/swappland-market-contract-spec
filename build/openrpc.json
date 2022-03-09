@@ -173,8 +173,8 @@
             "properties": {
               "sale_id": {
                 "title": "SaleId",
-                "type": "string",
-                "$comment": "U64 string"
+                "type": "integer",
+                "$comment": "u64 only 2^53 support"
               },
               "approval_id": {
                 "title": "ApprovalId",
@@ -400,8 +400,8 @@
         "description": "The sales_id for the listing",
         "schema": {
           "title": "SaleId",
-          "type": "string",
-          "$comment": "U64 string"
+          "type": "integer",
+          "$comment": "u64 only 2^53 support"
         }
       }
     },
@@ -541,8 +541,8 @@
           "description": "Sale id for removing the associated sale",
           "schema": {
             "title": "SaleId",
-            "type": "string",
-            "$comment": "U64 string"
+            "type": "integer",
+            "$comment": "u64 only 2^53 support"
           },
           "required": true
         }
@@ -608,8 +608,8 @@
           "description": "sale id to retrieve sale",
           "schema": {
             "title": "SaleId",
-            "type": "string",
-            "$comment": "U64 string"
+            "type": "integer",
+            "$comment": "u64 only 2^53 support"
           },
           "required": true
         }
@@ -660,8 +660,8 @@
             },
             "sale_id": {
               "title": "SaleId",
-              "type": "string",
-              "$comment": "U64 string"
+              "type": "integer",
+              "$comment": "u64 only 2^53 support"
             },
             "service_fee": {
               "title": "U128",
@@ -885,8 +885,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string",
-                  "$comment": "U64 string"
+                  "type": "integer",
+                  "$comment": "u64 only 2^53 support"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1143,8 +1143,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string",
-                  "$comment": "U64 string"
+                  "type": "integer",
+                  "$comment": "u64 only 2^53 support"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1381,8 +1381,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string",
-                  "$comment": "U64 string"
+                  "type": "integer",
+                  "$comment": "u64 only 2^53 support"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1619,8 +1619,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string",
-                  "$comment": "U64 string"
+                  "type": "integer",
+                  "$comment": "u64 only 2^53 support"
                 },
                 "service_fee": {
                   "title": "U128",
@@ -1868,8 +1868,8 @@
                 },
                 "sale_id": {
                   "title": "SaleId",
-                  "type": "string",
-                  "$comment": "U64 string"
+                  "type": "integer",
+                  "$comment": "u64 only 2^53 support"
                 },
                 "service_fee": {
                   "title": "U128",
