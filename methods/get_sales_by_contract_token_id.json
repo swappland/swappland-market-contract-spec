@@ -25,24 +25,6 @@
         "$ref": "../standards/schemas/TokenId.json"
       },
       "required": true 
-    },
-    {
-      "name": "from_index",
-      "summary": "From index value",
-      "description": "From index value",
-      "schema": {
-        "$ref": "../standards/schemas/U64.json"
-      },
-      "required": true 
-    },
-    {
-      "name": "limit",
-      "summary": "Limit to set iteration to rel. to index ",
-      "description": "Limit to set iteration to rel. to index",
-      "schema": {
-        "$ref": "../standards/schemas/Limit.json"
-      },
-      "required": true 
     }
   ],
   "result": {
