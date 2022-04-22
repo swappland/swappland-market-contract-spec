@@ -3,8 +3,6 @@
 ## What is Swappland? 
 [Swappland](https://swapp.land) is a p2p Marketplace for Near, where people can trade NFT for NFT or Near for NFT, and eventually all forms of tokens for an NFT. We allow anyone to list any in their wallet for trade. This is the dev friendly client. 
 
-The specification here is the Open-RPC[openrpc] specification of the client.
-
 ## Usage
 
 ### Installation 
@@ -32,8 +30,6 @@ const near = new Near({
 const account:Account = await near.account(accountId);
 
 const client = new SwapplandClient({account, contractId: testnetContractId})
-
-client.
 
 ```
 
